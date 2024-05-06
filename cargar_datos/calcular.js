@@ -4,10 +4,10 @@ document.querySelector(".btn").addEventListener("click",cargar_datos);
 
 Tabla_de_datos.innerHTML= `
         <div class="titulo">Tabla de costos</div>
-        <div >Servicio</div>
-        <div >Costo sin %</div>
-        <div >Costo con %</div>
-        <div >Costo total</div>
+        <div class="campo">Servicio</div>
+        <div class="campo">Costo sin %</div>
+        <div class="campo">Costo con %</div>
+        <div class="campo">Costo total</div>
         <div class="resultados"></div>
     
     `;
@@ -41,11 +41,12 @@ function cargar_datos(){
     div_cargar.innerHTML = "";
     let total = 0;
     let costosin = 0;
-    let costocon = 0;
+    let costo_con = 0;
+    
 
     servicios.forEach((elemento)=>{
 
-
+        total = elemento.costo*personas + (elemento.costo * elemento.porcentaje_extra);
 
         let div = document.createElement("div");
         div.innerHTML=`

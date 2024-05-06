@@ -52,8 +52,8 @@ function cargar_datos(){
         div.innerHTML=`
         <di>${elemento.nombre}</di>
         <div>Q ${elemento.costo*personas}</div>
-        <div>${(elemento.costo * elemento.porcentaje_extra)}</div>
-        <div>${total}</div>
+        <div>Q ${(elemento.costo * elemento.porcentaje_extra)}</div>
+        <div>Q ${total}</div>
         `;
         div_cargar.appendChild(div);
 
